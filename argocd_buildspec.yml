@@ -28,7 +28,7 @@ phases:
       python: 3.11
     commands:
       - echo "Installing dependencies..."
-      - yum install -y git curl tar
+      - yum install -y git tar
 
       # Install kubectl
       - echo "Installing kubectl..."
