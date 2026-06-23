@@ -105,6 +105,10 @@ phases:
           --timeout 10m \
           --atomic
 
+      # Apply the ArgoCD self-managing Application manifest
+      - echo "Applying ArgoCD self-managing Application manifest..."
+      - kubectl apply -f argocd-app.yaml -n argocd
+
   post_build:
     commands:
       # Check build status and notify Slack
