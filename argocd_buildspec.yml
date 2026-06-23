@@ -109,7 +109,7 @@ phases:
       - echo "Waiting for ArgoCD CRDs to be established..."
       - kubectl wait --for condition=established --timeout=60s crd/applications.argoproj.io || sleep 10
       - echo "Applying ArgoCD self-managing Application manifest..."
-      - kubectl apply -f argocd-app.yaml -n argocd
+      - kubectl apply -f argocd-app.yml -n argocd
 
   post_build:
     commands:
